@@ -1,0 +1,26 @@
+#include "monty.h"
+
+#define MAX_LINE_LENGTH 1024
+
+/**
+ * getline - Read a line of text from a file
+ * @file: Pointer to the file to read from
+ *
+ * Return: Pointer to the line of text read from the file
+ */
+char *getline(FILE *file)
+{
+    char *line = NULL;
+    size_t size = 0;
+    ssize_t read_line;
+
+    if ((read_line = getline(&line, &size, file)) == -1) {
+        return NULL;
+    }
+
+    if (line[read_line - 1] == '\n') {
+        line[read_line - 1] = '\0';
+    }
+
+    return line;
+}
