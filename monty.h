@@ -76,7 +76,7 @@ void monty_mul(stack_t **head, unsigned int count);
 void monty_mod(stack_t **head, unsigned int count);
 void monty_pchar(stack_t **head, unsigned int count);
 void monty_pstr(stack_t **head, unsigned int count);
-void monty_rotl(stack_t **head, unsigned int count);
+void monty_rotl(stack_t **head, __attribute__((unused)) unsigned int count);
 void monty_rotr(stack_t **head, __attribute__((unused)) unsigned int count);
 void addnode(stack_t **head, int n);
 void addqueue(stack_t **head, int n);
